@@ -1,6 +1,0 @@
-<nppcrypt version="101">
-<encryption cipher="aes256" mode="cbc" encoding="base16" />
-<random iv="09+HuItoNDhT0Ucp+g+dGw==" salt="U6ZBCLAHqnV3ZBYI8vEz1A==" />
-<key algorithm="pbkdf2" hash="md5" iterations="1000" />
-</nppcrypt>
-f87f65a5424e9e92baa7160ce7090ed8

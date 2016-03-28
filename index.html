@@ -27,6 +27,12 @@
     <meta name="msapplication-TileImage" content="favicon/favicon-144.png">
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
 
+    <script>
+        var host = "viclai.github.io";
+        if (host == window.location.host && 
+                window.location.protocol != "https:")
+            window.location.protocol = "https";
+    </script>
     <script src="jquery.min.1.7.js"></script>
     <script src="effects.js"></script>
 </head>
