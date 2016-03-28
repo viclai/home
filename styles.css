@@ -1,0 +1,312 @@
+.flexBox {
+    display: flex;
+}
+
+#topContain {
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+#wrapper {
+    flex-grow: 2;
+}
+
+#topTitle {
+    font-weight: bold;
+    font-family: "Copperplate Gothic Bold", "Times New Roman";
+    text-align: left;
+    font-size: 30px;
+    border-radius: 25px;
+    padding: 10px 10px;
+    border: 1px solid black;
+    width: 95%;
+}
+
+#titleLink {
+    color: inherit;
+}
+
+#titleSect {
+    border-radius: 25px;
+    padding: 10px 10px;
+    border: 1px solid black;
+    width: 700px;
+    margin-bottom: 5px;
+}
+
+#uclaTitle {
+    color: blue;
+    font-size: 25px;
+}
+
+#alumniImgs {
+    text-align: right;
+    width: 46%;
+    flex-grow: 1;
+}
+
+#chsLogo, #uclaLogo {
+    vertical-align: text-top;
+}
+
+#chsLogo {
+    width: 10%;
+    height: 80px;
+}
+
+#uclaLogo {
+    width: 80px;
+    height: 80px;
+}
+
+#updated {
+    text-align: center;
+    font-style: italic;
+}
+
+#mainCont {
+    display: table;
+    width: 100%;
+}
+
+#directory {
+    display: table-cell;
+    height: 100%;
+    width: 10%;
+    background: #F3F3ED;
+    padding: 1px;
+    margin: 1px;
+}
+
+#directoryInfo {
+    width: 10%;
+    text-align: center;
+    vertical-align: text-top;
+    position: fixed;
+}
+
+#directoryInfo a:hover {
+    font-weight: bold;
+}
+
+#resumeInfo {
+    display: table-cell;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 10px 10px;
+}
+
+#resumeInfo a:hover {
+    text-decoration: underline;
+}
+
+#projects {
+    display: inline;
+}
+
+#projContent ul li {
+    margin: 0 0 8px 0;
+}
+
+#uclaPlanner, #bugBlast {
+    display: flex;
+    width: 100%;
+}
+
+#plannerImgSect {
+    flex-grow: 3;
+    background: 
+        url("images/planner_pic.gif")
+        center center / 80px 100px
+        no-repeat;
+}
+
+#plannerContent {
+    flex-grow: 1;
+}
+
+#bugBlastContent {
+    flex-grow: 2;
+}
+
+#bugBlastImg {
+    flex-grow: 1;
+    height: 20px;
+    /*background:
+        url("images/bug_blast_animated.gif")
+        center center / 350px 200px
+        no-repeat;*/
+}
+
+#bugPic {
+    width: 350px;
+    height: 200px;
+}
+
+#upe {
+    width: 40%;
+}
+
+#upeCont {
+    flex-grow: 1;
+}
+
+#upeImgSect {
+    flex-grow: 1;
+    background: 
+        url("images/upe.jpg") 
+        right center / 80px 80px 
+        no-repeat;
+}
+
+#upePic {
+    width: 80px;
+    height: 80px;
+    
+}
+
+#courseContain {
+    width: 80%;
+    height: 450px;
+}
+
+#topics {
+    width: 25%;
+    border: 1px solid black;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.topic {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    cursor: pointer;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-left: -1px;
+    margin-bottom: -1px;
+    background-color: white;
+}
+
+a, .topic a:hover, .topic:hover {
+    text-decoration: none;
+}
+
+.topic a {
+    color: inherit;
+}
+
+a {
+    color: blue;
+}
+
+.skill {
+    border-radius: 15px;
+    padding: 3px 3px;
+    border: 1px solid black;
+    vertical-align: bottom;
+    background-color: #EBEBE0;
+}
+
+#courseView {
+    width: 75%;
+    border: 1px solid black;
+    padding-left: 5px;
+    overflow: auto;
+    flex-grow: 1;
+}
+
+#courseView h4 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.square {
+    list-style-type: square;
+}
+
+.circle {
+    list-style-type: circle;
+}
+
+#mat {
+    width: 90%;
+}
+
+#matCont {
+    flex-grow: 1;
+}
+
+#matImgSect {
+    flex-grow: 1;
+    background: 
+        url("images/MAT_Logo.jpg") 
+        right center / 100px 100px 
+        no-repeat;
+}
+
+#matPic {
+    width: 100px;
+    height: 100px;
+}
+
+#csf {
+    width: 65%;
+}
+
+#csfCont {
+    flex-grow: 1;
+}
+
+#csfImgSect {
+    flex-grow: 1;
+    background: 
+        url("images/csf.png")
+        right center / 80px 80px
+        no-repeat;
+}
+
+#csfPic {
+    width: 100px;
+    height: 100px;
+}
+
+hr {
+    margin-top: 0;
+}
+
+h1, h2 {
+    padding: 1px;
+}
+
+h1, h2, h4 {
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-family: "Copperplate Gothic Bold", "Times New Roman";
+    font-size: 50px;
+}
+
+h2, h3, h4 {
+    font-family: "Times New Roman";
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 2px;
+}
+
+h3 {
+    font-size: 25px;
+    text-align: left;
+    color: #3399FF;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 15px;
+    margin: 3px;
+}
