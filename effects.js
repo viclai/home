@@ -426,8 +426,60 @@ $(document).ready(function() {
         $(this).off('hover');
     });
 
-    // Unix
+    // Python
     $("#topic17").click(function() {
+        var courseView = document.getElementById("courseView");
+        while(courseView.firstChild.nodeType != 1) {
+            courseView.removeChild(courseView.firstChild);
+        }
+
+        $("#courseView div").each(function() {
+            $(this).hide();
+        });
+        $(".topic").each(function() {
+            if ($(this).css("background-color") == "rgb(51, 153, 255)") {
+                $(this).css("background-color", "white");
+                $(this).hover(function() {
+                    $(this).css("background-color", "yellow");
+                }, function() {
+                    $(this).css("background-color", "white");
+                });
+            }
+        });
+
+        $("#python").show();
+        $(this).css("background-color", "#3399FF");
+        $(this).off('hover');
+    });
+
+    // Software Engineering
+    $("#topic18").click(function() {
+        var courseView = document.getElementById("courseView");
+        while(courseView.firstChild.nodeType != 1) {
+            courseView.removeChild(courseView.firstChild);
+        }
+
+        $("#courseView div").each(function() {
+            $(this).hide();
+        });
+        $(".topic").each(function() {
+            if ($(this).css("background-color") == "rgb(51, 153, 255)") {
+                $(this).css("background-color", "white");
+                $(this).hover(function() {
+                    $(this).css("background-color", "yellow");
+                }, function() {
+                    $(this).css("background-color", "white");
+                });
+            }
+        });
+
+        $("#software-engineering").show();
+        $(this).css("background-color", "#3399FF");
+        $(this).off('hover');
+    });
+
+    // Unix
+    $("#topic19").click(function() {
         var courseView = document.getElementById("courseView");
         while(courseView.firstChild.nodeType != 1) {
             courseView.removeChild(courseView.firstChild);
@@ -452,8 +504,8 @@ $(document).ready(function() {
         $(this).off('hover');
     });
 
-    // Web Design
-    $("#topic18").click(function() {
+    // Web Applications
+    $("#topic20").click(function() {
         var courseView = document.getElementById("courseView");
         while(courseView.firstChild.nodeType != 1) {
             courseView.removeChild(courseView.firstChild);
