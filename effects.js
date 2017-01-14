@@ -348,8 +348,34 @@ $(document).ready(function() {
         $(this).off('hover');
     });
 
-    // Networks
+    // Machine Learning
     $("#topic14").click(function() {
+        var courseView = document.getElementById("courseView");
+        while(courseView.firstChild.nodeType != 1) {
+            courseView.removeChild(courseView.firstChild);
+        }
+
+        $("#courseView div").each(function() {
+            $(this).hide();
+        });
+        $(".topic").each(function() {
+            if ($(this).css("background-color") == "rgb(51, 153, 255)") {
+                $(this).css("background-color", "white");
+                $(this).hover(function() {
+                    $(this).css("background-color", "yellow");
+                }, function() {
+                    $(this).css("background-color", "white");
+                });
+            }
+        });
+
+        $("#ml").show();
+        $(this).css("background-color", "#3399FF");
+        $(this).off('hover');
+    });
+
+    // Networks
+    $("#topic15").click(function() {
         var courseView = document.getElementById("courseView");
         while(courseView.firstChild.nodeType != 1) {
             courseView.removeChild(courseView.firstChild);
@@ -375,7 +401,7 @@ $(document).ready(function() {
     });
 
     // Operating Systems
-    $("#topic15").click(function() {
+    $("#topic16").click(function() {
         var courseView = document.getElementById("courseView");
         while(courseView.firstChild.nodeType != 1) {
             courseView.removeChild(courseView.firstChild);
@@ -401,7 +427,7 @@ $(document).ready(function() {
     });
 
     // Programming Languages
-    $("#topic16").click(function() {
+    $("#topic17").click(function() {
         var courseView = document.getElementById("courseView");
         while(courseView.firstChild.nodeType != 1) {
             courseView.removeChild(courseView.firstChild);
@@ -427,7 +453,7 @@ $(document).ready(function() {
     });
 
     // Python
-    $("#topic17").click(function() {
+    $("#topic18").click(function() {
         var courseView = document.getElementById("courseView");
         while(courseView.firstChild.nodeType != 1) {
             courseView.removeChild(courseView.firstChild);
@@ -453,7 +479,7 @@ $(document).ready(function() {
     });
 
     // Software Engineering
-    $("#topic18").click(function() {
+    $("#topic19").click(function() {
         var courseView = document.getElementById("courseView");
         while(courseView.firstChild.nodeType != 1) {
             courseView.removeChild(courseView.firstChild);
@@ -479,7 +505,7 @@ $(document).ready(function() {
     });
 
     // Unix
-    $("#topic19").click(function() {
+    $("#topic20").click(function() {
         var courseView = document.getElementById("courseView");
         while(courseView.firstChild.nodeType != 1) {
             courseView.removeChild(courseView.firstChild);
@@ -505,7 +531,7 @@ $(document).ready(function() {
     });
 
     // Web Applications
-    $("#topic20").click(function() {
+    $("#topic21").click(function() {
         var courseView = document.getElementById("courseView");
         while(courseView.firstChild.nodeType != 1) {
             courseView.removeChild(courseView.firstChild);
