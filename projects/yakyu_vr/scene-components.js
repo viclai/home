@@ -147,29 +147,29 @@ Declare_Any_Class("Body",
         //console.log("Inside checking collision");
         var i;
         var p1 = mult_vec(this.prev_location_matrix, vec4(0, 0, 0, 1)).slice(0, 3);
-        if (b.name == "fence1") {
-          console.log("p1: ");
-          console.log(p1);
-        }
+        //if (b.name == "fence1") {
+          //console.log("p1: ");
+          //console.log(p1);
+        //}
         var p2 = mult_vec(this.location_matrix, vec4(0, 0, 0, 1)).slice(0, 3);
-        if (b.name == "fence1") {
-          console.log("p2: ");
-          console.log(p2);
-        }
+        //if (b.name == "fence1") {
+          //console.log("p2: ");
+          //console.log(p2);
+        //}
         var pVec = subtract(p1, p2);
         //console.log("pVec: ");
         //console.log(pVec);
         var bCenter = mult_vec(b.location_matrix, vec4(0, 0, 0, 1)).slice(0, 3);
-        if (b.name == "fence1") {
-          console.log("bCenter: ");
-          console.log(bCenter);
-        }
+        //if (b.name == "fence1") {
+          //console.log("bCenter: ");
+          //console.log(bCenter);
+        //}
         var d = -((pVec[0] * -bCenter[0]) + (pVec[1] * - bCenter[1]) + (pVec[2] * -bCenter[2])); // Last component of plane
         var intersection = intersect(p1, p2, pVec.concat(d));
-        if (b.name == "fence1") {
-          console.log("Intersection: ");
-          console.log(intersection);
-        }
+        //if (b.name == "fence1") {
+          //console.log("Intersection: ");
+          //console.log(intersection);
+        //}
         var new_loc = translation(intersection);
         var new_a_inv = inverse(mult(new_loc, scale(this.scale)));
         var insideObj = false;
@@ -214,10 +214,10 @@ Declare_Any_Class("Body",
         if (betweenPoints && insideObj) {
           //console.log(this.collision_history);
           if (this.collision_history[1].name == b.name && this.collision_history[1].collided == true) {
-            console.log("Prevented double collision");
+            //console.log("Prevented double collision");
             return false;
           }
-          console.log("reverted");
+          //console.log("reverted");
           this.location_matrix = this.prev_location_matrix;
           this.linear_velocity = this.prev_linear_velocity;
           this.angular_velocity = this.prev_angular_velocity;
@@ -1672,7 +1672,7 @@ Declare_Any_Class("Baseball_Scene",
 
         if (t > this.prev_anim_time && this.bodies.baseball != null) {
           this.bodies.baseball.advance(graphics_state.animation_delta_time);
-          //console.log(graphics_state.animation_delta_time);
+          console.log(graphics_state.animation_delta_time);
           this.ball_transform = this.bodies.baseball.location_matrix;
           //console.log("Position: " + mult_vec(this.ball_transform, vec4(0, 0, 0, 1)));
         }
@@ -1726,20 +1726,20 @@ Declare_Any_Class("Baseball_Scene",
 
             if (this.bodies.baseball.collided(b, a_inv, collider)) {
               if (b.name === "bat") {
-                console.log("Collided with bat!");
+                //console.log("Collided with bat!");
                 this.bodies.baseball.linear_velocity[0] = event.contact_x_velocity.value;
                 this.bodies.baseball.linear_velocity[1] = event.contact_y_velocity.value * this.bodies.baseball.linear_velocity[1];
                 this.bodies.baseball.linear_velocity[2] = event.contact_z_velocity.value + this.bodies.baseball.linear_velocity[2];
                 this.bodies.baseball.angular_velocity = -this.bodies.baseball.angular_velocity;
               } else if (b.name === "fence" || b.name === "fence1") {
-                console.log("Past fence!");
+                //console.log("Past fence!");
                 this.bodies.baseball.linear_velocity[1] = 0;
                 this.bodies.baseball.linear_velocity[0] = 0;
               }
             }
 
             else if ((b.name === "fence" || b.name === "fence1") && b.check_if_colliding(this.bodies.baseball, b_inv, collider)) {
-              console.log("Collided with fence!");
+              //console.log("Collided with fence!");
               this.bodies.baseball.linear_velocity[1] = 0;
               this.bodies.baseball.linear_velocity[0] = 0;
             }
