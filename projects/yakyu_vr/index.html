@@ -1,0 +1,151 @@
+<!-- 
+  Code adopted from 
+  "UCLA's Graphics Example Code (Javascript and C++ translations available),
+  by Garett Ridge for CS174a"
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <script type="text/javascript" src="MV.js"               ></script>
+    <script type="text/javascript" src="webgl-obj-loader.js" ></script>
+    <script type="text/javascript" src="tinywebgl-ucla.js"   ></script> <!-- Library functions-->
+    <script type="text/javascript" src="scene-components.js" ></script>
+    <script type="text/javascript" src="shapes.js"           ></script>
+    <script type="text/javascript" src="shaders.js"          ></script>
+    <script type="text/javascript"> "use strict"
+      // ********************* WHOLE PROGRAM'S ENTRY POINT *******************
+      window.onload = function init() {
+        /*
+         * Firstly, browsers support something like up to 16 instances of WebGL
+         * per page. Construct a Canvas_Manager, which instances a WebGL 
+         * context for our main canvas. Set your background here, too.
+         */
+        var background = Color(102/255, 204/255, 1, 1);
+        window.contexts = {
+          main_canvas: new Canvas_Manager("gl-canvas", background)
+        };
+        
+        // Put all shader programs in the GPU.
+        var shaders = ["Phong_Model", "Funny_Shader", "Fake_Bump_Map"];
+        for (let s of shaders) {
+          contexts["main_canvas"].shaders_in_use[s] = (new window[s](
+            contexts["main_canvas"].gl
+          ));
+        } 
+                    
+        // IMPORTANT: Include all your new image files in the following array:
+        var texturesDir = "resources/"
+        var texture_files_to_load = [ // Put all texture images in the GPU.
+          "text.png",
+          "grass.jpg",
+          "stitching.jpg",
+          "helmet_paint.jpg",
+          "chain.jpg",
+          "large_grass.png"
+        ];
+        for (let f of texture_files_to_load) {
+          contexts["main_canvas"].textures_in_use[f] = (new Texture(
+            contexts["main_canvas"].gl, texturesDir + f, true
+          ));
+        }
+
+        /*
+         * We instantiate some of our custom "Scene_Component" subclasses 
+         * and register objects to their master "Canvas_Manager" object --
+         * which WebGL calls upon every time a draw / keyboard / mouse event
+         * happens.
+         */   
+        var scene_components = [
+          "Debug_Screen",
+          "Camera",
+          "Flag_Toggler"
+        ];
+        if (demos[0] == "")
+          scene_components.push("Baseball_Scene");
+        else {
+          for (let d of demos) {
+            // Parse the URL and instantiate the demos named there
+            scene_components.push(d.replace(/-/g,"_"));
+          }
+        }
+        for (let s of scene_components) { 
+          // Register the demos with their Canvas_Manager.
+          contexts["main_canvas"].register_scene_component(new window[s](
+            contexts["main_canvas"]
+          ));
+        }
+        
+        for (let c in contexts) {
+          // Call render() for each WebGL context on this page.
+          // Then render() will re-queue itself for more calls.
+          contexts[c].render();
+        }
+      }
+
+      // Find the correct browser's version of requestAnimationFrame() needed
+      // for queue-ing up re-display events:
+      window.requestAnimFrame = (function(w) { 
+        return w.requestAnimationFrame || w.webkitRequestAnimationFrame ||
+               w.mozRequestAnimationFrame || w.oRequestAnimationFrame ||
+               w.msRequestAnimationFrame ||
+               function(callback, element) {
+                 w.setTimeout(callback, 1000/60);
+               };
+      })(window);  
+      
+      var demos = [];
+      // For explanation of this part see Stackoverflow on 
+      // "How to pass a parameter to a javascript through a url and display it
+      // on a page?"
+      for (let q of window.location.search.substring(1).split("&"))
+        demos.push(decodeURIComponent(q || "").replace(/[^_\W]+/g, (s) => s.charAt(0).toUpperCase() + s.substr(1).toLowerCase()));      
+    </script>
+  </head>
+  <body>
+    <p>
+      <canvas id="gl-canvas" width="800" height="600"></canvas>
+    </p>
+    <p>
+      <a href="#" onclick='document.getElementById( "instructions" ).style = "display:block"; this.style = "display:none";'>
+        Click for instructions
+      </a>
+      <div id="instructions" style = "display:none">
+        Controlling this Graphics Object: 
+        <ul>
+          <li>
+            Animations will begin in a paused state upon loading, so 
+            first you should press ALT+a to play or pause animation.
+          </li>
+          <li>
+            Clicking and dragging moves the first-person camera.
+          </li>
+          <li>
+            Press p, h, 1, 2, and 3 to view the perspectives of the pitcher,
+            home-plate umpire, first baseman, second baseman, and third
+            baseman, respectively. 
+          </li>
+          <li>
+            Press t to un-hide the heads-up-display text. **If this doesn't do
+            anything** then you are running your files without correctly 
+            hosting them. You need to run cd path/to/these/files, then run 
+            python -m http.server, then visit the URL localhost:8000.
+          </li>
+          <li>     
+            The keys ALT+n and ALT+g switch shading behaviors. ALT+n directly 
+            shows you normal vectors on shapes by interpreting X,Y,Z vectors
+            as R,G,B colors. ALT+g toggles Gouraud shading vs Smooth Phong 
+            shading with textures.
+          </li>
+          <li>
+            Press up and down to cycle through a live feed of important strings
+            and values of the program -- the code for each Scene_Component 
+            includes a function where it can provide these.
+          </li>
+          <li>
+            Have fun.
+          </li>
+      </div>
+    </p>
+  </body>
+</html>
