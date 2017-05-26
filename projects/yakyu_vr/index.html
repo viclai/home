@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Yakyu VR</title>
     <meta charset="UTF-8"/>
     <script type="text/javascript" src="MV.js"               ></script>
     <script type="text/javascript" src="webgl-obj-loader.js" ></script>
@@ -121,9 +122,10 @@
             Clicking and dragging moves the first-person camera.
           </li>
           <li>
-            Press p, h, 1, 2, and 3 to view the perspectives of the pitcher,
-            home-plate umpire, first baseman, second baseman, and third
-            baseman, respectively. 
+            Press b to follow the ball. To view the perspective of a particular
+            position on the field, press the number corresponding to the
+            baseball position number as indicated in the diagram at the bottom.
+            For example, to view the perspective of the first baseman, press 3.
           </li>
           <li>
             Press t to un-hide the heads-up-display text. **If this doesn't do
@@ -131,20 +133,14 @@
             hosting them. You need to run cd path/to/these/files, then run 
             python -m http.server, then visit the URL localhost:8000.
           </li>
-          <li>     
-            The keys ALT+n and ALT+g switch shading behaviors. ALT+n directly 
-            shows you normal vectors on shapes by interpreting X,Y,Z vectors
-            as R,G,B colors. ALT+g toggles Gouraud shading vs Smooth Phong 
-            shading with textures.
-          </li>
           <li>
             Press up and down to cycle through a live feed of important strings
-            and values of the program -- the code for each Scene_Component 
-            includes a function where it can provide these.
+            and values of the program.
           </li>
           <li>
             Have fun.
           </li>
+          <img src="resources/baseball_positions.png" alt="Baseball Positions" />
       </div>
     </p>
   </body>
