@@ -10,7 +10,7 @@
     <meta charset="UTF-8"/>
     <script type="text/javascript" src="MV.js"               ></script>
     <script type="text/javascript" src="webgl-obj-loader.js" ></script>
-    <script type="text/javascript" src="tinywebgl-ucla.js"   ></script> <!-- Library functions-->
+    <script type="text/javascript" src="tinywebgl-ucla.js"   ></script>
     <script type="text/javascript" src="scene-components.js" ></script>
     <script type="text/javascript" src="shapes.js"           ></script>
     <script type="text/javascript" src="shaders.js"          ></script>
@@ -43,7 +43,9 @@
           "stitching.jpg",
           "helmet_paint.jpg",
           "chain.jpg",
-          "large_grass.png"
+          "large_grass.png",
+          "face.jpg",
+          "shoe_color.jpg"
         ];
         for (let f of texture_files_to_load) {
           contexts["main_canvas"].textures_in_use[f] = (new Texture(
@@ -115,7 +117,7 @@
         Controlling this Graphics Object: 
         <ul>
           <li>
-            Animations will begin in a paused state upon loading, so 
+            Animation will begin in a paused state upon loading, so 
             first you should press ALT+a to play or pause animation.
           </li>
           <li>
@@ -132,7 +134,7 @@
           </li>
           <li>
             Press up and down to cycle through a live feed of important strings
-            and values of the program.
+            and values, including the frame rate, of the program.
           </li>
           <li>
             Have fun.

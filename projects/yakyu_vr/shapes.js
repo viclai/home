@@ -38,6 +38,12 @@
  *      Text_Line
  * 5. My Shapes:
  *      Base
+ *      Body_Tube
+ *      Half_Sphere
+ *      Square_Hole
+ *      Quarter_Circle_Diamond
+ *      Fence
+ *      Donut_Box
  ****************************************************************************/
 
 
