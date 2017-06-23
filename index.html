@@ -10,6 +10,8 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <link rel="shortcut icon" href="favicon/favicon.ico" />
@@ -123,21 +125,10 @@
     <div id="education" class="container-fluid bg-grey">
       <div class="row">
         <div class="col-sm-4">
-          <div class="row">
-            <div class="col-sm-6">
-              <a href="http://www.ucla.edu/" target="_blank">
-                <img src="images/ucla_logo.png" class="img-responsive"
-                  alt="UCLA" />
-              </a>
-            </div>
-            <div class="col-sm-6">
-              <a href="https://www.edline.net/pages/Cerritos_High_School"
-                target="_blank">
-                <img src="images/Cerritoslogo.gif" class="img-responsive"
-                  alt="CHS" />
-              </a>
-            </div>
-          </div>
+            <a href="http://www.ucla.edu/" target="_blank">
+              <img src="images/ucla_logo.png" class="img-responsive"
+                width="50%" height="50% alt="UCLA" />
+            </a>
         </div>
         <div class="col-sm-8">
           <h2>EDUCATION TIMELINE</h2>
@@ -200,7 +191,7 @@
         </div>
       </div>
       <div class="col-sm-4">
-        <img class="img-responsive" src="images/pan-logo.png" />
+        <i class="material-icons logo">business_center</i>
       </div>
     </div>
 
@@ -435,45 +426,62 @@
 
     <div id="honors" class="container-fluid">
       <h2 class="text-center">HONORS</h2>
-      <div id="upe" class="container-fluid">
+      <div class="row">
         <div class="col-sm-4">
-          <a href="https://upe.seas.ucla.edu/" target="_blank">
-            <img class="img-responsive" src="images/upe.jpg" alt="UPE" />
-          </a>
+          <i class="fa fa-trophy logo"></i>
         </div>
         <div class="col-sm-8">
-          <h3>
-            <a href="https://upe.seas.ucla.edu/" 
-              target="_blank">Upsilon Pi Epsilon</a> (UPE) Member
-          </h3>
-          <p>
-            <ul>
-              <li>Inducted in Spring 2015</li>
-              <li>Minimum 3.5 GPA; top 33% class ranking</li>
-            </ul>
-          </p>
-        </div>
-      </div>
-      <div id="smita-patel" class="container-fluid">
-        <div class="col-sm-4">
-          <a href="http://engineering.ucla.edu/" target="_blank">
-            <img class="img-responsive" src="images/ucla-engineering.jpeg"
-              alt="UCLA Engineering"/>
-          </a>
-        </div>
-        <div class="col-sm-8">
-          <h3>Smita Patel Scholarship in Engineering</h3>
-          <p>
-            <ul>
-              <li>
-                Awarded as a <a
-                  href="http://www.seasoasa.ucla.edu/scholarships-for-undergraduates/"
-                  target="_blank">
-                Henry Samueli School of Engineering and Applied Science
-                (HSSEAS) Scholarship</a> in January 2014
-              </li>
-            </ul>
-          </p>
+          <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <h4>
+                  <a href="https://upe.seas.ucla.edu/" 
+                    target="_blank">Upsilon Pi Epsilon</a> (UPE) Member
+                  <br />
+                  <span style="font-style:normal;">
+                    Inducted in Spring 2015
+                  </span>
+                  <br />
+                  <span style="font-style:normal;">
+                    Minimum 3.5 GPA; top 33% class ranking
+                  </span>
+                </h4>
+              </div>
+              <div class="item">
+                <h4>
+                  Smita Patel Scholarship in Engineering<br />
+                  <span style="font-style:normal;">
+                    A <a
+                      href="http://www.seasoasa.ucla.edu/scholarships-for-undergraduates/"
+                      target="_blank">
+                    Henry Samueli School of Engineering and Applied Science
+                    (HSSEAS) Scholarship</a>
+                  </span>
+                  <br />
+                  <span style="font-style:normal;">
+                    Awarded in January 2014
+                  </span>
+                </h4>
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -867,69 +875,63 @@
 
     <div id="leadership" class="container-fluid">
       <h2 class="text-center">LEADERSHIP</h2>
-      <div id="mat" class="container-fluid">
+      <div class="row">
         <div class="col-sm-4">
-          <a href="http://www.mualphatheta.org/" target="_blank">
-            <img class="img-responsive" src="images/MAT_Logo.jpg" />
-          </a>
+          <br /><br /><br /><br />
+          <i class="fa fa-users logo"></i>
         </div>
         <div class="col-sm-8">
-          <h3>
-            <a href="http://www.mualphatheta.org/" target="_blank">
-              Mu Alpha Theta
-            </a>
-          </h3>
-          <p>
-            Co-President of <a href="http://www.mualphatheta.org/"
-              target="_blank"><b>Mu Alpha Theta</b></a> (Cerritos High School
-            chapter), <i>a national mathematics honor society</i>
-            <br />
-            September 2012 - June 2013
-            <ul>
-              <li>
-                Organized and directed a local school district math
-                competition called <i>MATHLETES</i> for elementary and 
-                middle school students.
-              </li>
-              <li>
-                Planned and coordinated events/activities that 
-                enrich and promote mathematics.
-              </li>
-              <li>
-                Tutored math students online via <a 
-                  href="http://www.studybuddyhelp.org/" 
-                  target="_blank">Study Buddy</a>.
-              </li>
-            </ul>
-          </p>
-        </div>
-      </div>
-
-      <div id="csf" class="container-fluid">
-        <div class="col-sm-4">
-          <a href="http://csf-cjsf.org/" target="_blank">
-            <img class="img-responsive" src="images/csf.png" />
-          </a>
-        </div>
-        <div class="col-sm-8">
-          <h3>
-            <a href="http://csf-cjsf.org/" target="_blank">
-              California Scholarship Federation
-            </a>
-            (CSF)
-          </h3>
-          <p>
-            Co-Director of Publicity/Technology Chair of <a 
-              href="http://csf-cjsf.org/" 
-              target="_blank"><b>California Scholarship Federation</b></a>
-            <br />
-            September 2011 - June 2013
-            <ul>
-              <li>Designed and maintained a club webpage.</li>
-              <li>Planned and led community service activities and events.</li>
-              <li>Tutored peers in various school subjects.</li>
-            </ul>
-          </p>
+          <div id="mat">
+            <h3>
+              <a href="http://www.mualphatheta.org/" target="_blank">
+                Mu Alpha Theta
+              </a>
+            </h3>
+            <p>
+              Co-President of <a href="http://www.mualphatheta.org/"
+                target="_blank"><b>Mu Alpha Theta</b></a> (Cerritos High School
+              chapter), <i>a national mathematics honor society</i>
+              <br />
+              September 2012 - June 2013
+              <ul>
+                <li>
+                  Organized and directed a local school district math
+                  competition called <i>MATHLETES</i> for elementary and 
+                  middle school students.
+                </li>
+                <li>
+                  Planned and coordinated events/activities that 
+                  enrich and promote mathematics.
+                </li>
+                <li>
+                  Tutored math students online via <a 
+                    href="http://www.studybuddyhelp.org/" 
+                    target="_blank">Study Buddy</a>.
+                </li>
+              </ul>
+            </p>
+          </div>
+          <br />
+          <div id="csf">
+            <h3>
+              <a href="http://csf-cjsf.org/" target="_blank">
+                California Scholarship Federation
+              </a>
+              (CSF)
+            </h3>
+            <p>
+              Co-Director of Publicity/Technology Chair of <a 
+                href="http://csf-cjsf.org/" 
+                target="_blank"><b>California Scholarship Federation</b></a>
+              <br />
+              September 2011 - June 2013
+              <ul>
+                <li>Designed and maintained a club webpage.</li>
+                <li>Planned and led community service activities and events.</li>
+                <li>Tutored peers in various school subjects.</li>
+              </ul>
+            </p>
+          </div>
         </div>
       </div>
     </div>
