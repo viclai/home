@@ -1,9 +1,14 @@
+a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+
 .skill {
     border-radius: 15px;
     padding: 3px 3px;
     border: 1px solid black;
     vertical-align: bottom;
     color: #FFD700;
+    background-color: black;
 }
 
 .tab-content {
@@ -59,18 +64,6 @@
 
 .carousel-indicators li.active {
     background-color: #f4511e;
-}
-
-.item h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    font-weight: 400;
-    font-style: italic;
-    margin: 70px 0;
-}
-
-.item span {
-    font-style: normal;
 }
 
 .panel {
@@ -271,12 +264,12 @@ footer .glyphicon {
 .item h4 {
     font-size: 19px;
     line-height: 1.375em;
-    font-weight: 400;
-    font-style: italic;
+    font-weight: bold;
     margin: 70px 0;
 }
 
 .item span {
     font-style: normal;
+    font-weight: normal;
 }
 
