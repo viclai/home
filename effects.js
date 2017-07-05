@@ -34,14 +34,4 @@ $(document).ready(function(){
       }
     });
   });
-
-  $('.pull-down-half').each(function() {
-    var $this = $(this);
-    $this.css('margin-top', 0.5 * ($this.parent().height() - $this.height()))
-  });
-
-  $('.pull-down').each(function() {
-    var $this = $(this);
-    $this.css('margin-top', $this.parent().height() - $this.height())
-  });
 })
