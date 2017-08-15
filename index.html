@@ -120,7 +120,7 @@
         <p>
           I enjoy programming and learning new areas of computer
           science. I recently contributed to an open-source repository that is
-          starred by over 4.6k users on GitHub. I mainly code using <span
+          starred by over 4.7k users on GitHub. I mainly code using <span
             class="skill">C++</span>, <span class="skill">Python</span>, and
           <span class="skill">JavaScript</span>.
         </p>
@@ -237,10 +237,28 @@
       <div class="text-center">
         <em>Click on a project to view details.</em>
       </div>
+
       <br />
 
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
+          <p class="text-center">
+            <strong>
+              <a href="https://bracket-buster.herokuapp.com/" target="_blank">
+                <u>Bracket Buster</u>
+              </a>
+            </strong>
+          </p>
+          <p class="text-center">
+            <a class="btn btn-primary btn-lg disabled"
+              href="https://github.com/viclai/Bracket_Buster" target="_blank">
+              View on GitHub
+              <i class="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
+
+        <div class="col-sm-6">
           <p class="text-center">
             <strong>
               <a href="https://viclai.github.io/Yakyu_VR/" target="_blank">
@@ -256,70 +274,49 @@
             </a>
           </p>
         </div>
-
-        <div class="col-sm-4">
-          <p class="text-center">
-            <strong>
-              <a href="https://viclai.github.io/Lesion_Growth_Predictor/"
-                target="_blank">
-                <u>Lesion Growth Predictor</u>
-              </a>
-            </strong>
-          </p>
-          <p class="text-center">
-            <a class="btn btn-primary btn-lg"
-              href="https://github.com/viclai/Lesion_Growth_Predictor"
-              target="_blank">
-              View on GitHub
-              <i class="fa fa-github"></i>
-            </a>
-          </p>
-        </div>
-
-        <div class="col-sm-4">
-          <p class="text-center">
-            <strong>
-              <u>GotSwipes?</u>
-            </strong>
-          </p>
-          <p class="text-center">
-            <a class="btn btn-primary btn-lg"
-              href="https://github.com/tsleeve/SwipeSwap" target="_blank">
-              View on GitHub
-              <i class="fa fa-github"></i>
-            </a>
-          </p>
-        </div>
       </div>
 
-      <div class="row slideanim">
-        <div class="col-sm-4">
+      <div class="row slideanim vertical-align">
+        <div class="col-sm-6">
+          <a href="#bracket-buster" data-toggle="collapse">
+            <img src="images/bracket.png" class="img-responsive center-block"
+              alt="Bracket Buster">
+          </a>
+        </div>
+
+        <div class="col-sm-6">
           <a href="#yakyu" data-toggle="collapse">
             <img src="images/yakyu.gif" class="img-responsive center-block"
               alt="Yakyu VR">
           </a>
         </div>
-
-        <div class="col-sm-4">
-          <a href="#lesion-ml" data-toggle="collapse">
-            <img src="images/brain_perfusion.png"
-              class="img-responsive center-block"
-              alt="Lesion Growth Predictor">
-          </a>
-        </div>
-
-        <div class="col-sm-4">
-          <a href="#gotswipes" data-toggle="collapse">
-            <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item"
-                src="https://www.youtube.com/embed/EfiwvaxrPSA"></iframe>
-            </div>
-          </a>
-        </div>
       </div>
 
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
+          <div id="bracket-buster" class="collapse">
+            <p>
+              <i>Started in July 2017</i>
+              <ul>
+                <li>
+                  A chat application add-on that manages March Madness
+                  brackets filled out by users in a
+                  <a href="https://www.hipchat.com/"
+                    target="_blank">HipChat</a> room
+                </li>
+                <li>
+                  Implemented mainly using <kbd class="skill">Node.js</kbd>
+                  and <kbd class="skill">Handlebars</kbd>
+                </li>
+                <li>
+                  Deployed on <kbd class="skill">Heroku</kbd>
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
           <div id="yakyu" class="collapse">
             <p>
               <i>Started in May 2017</i>
@@ -341,8 +338,66 @@
             </p>
           </div>
         </div>
+      </div>
 
-        <div class="col-sm-4">
+      <br /><br />
+
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="text-center">
+            <strong>
+              <a href="https://viclai.github.io/Lesion_Growth_Predictor/"
+                target="_blank">
+                <u>Lesion Growth Predictor</u>
+              </a>
+            </strong>
+          </p>
+          <p class="text-center">
+            <a class="btn btn-primary btn-lg"
+              href="https://github.com/viclai/Lesion_Growth_Predictor"
+              target="_blank">
+              View on GitHub
+              <i class="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
+
+        <div class="col-sm-6">
+          <p class="text-center">
+            <strong>
+              <u>GotSwipes?</u>
+            </strong>
+          </p>
+          <p class="text-center">
+            <a class="btn btn-primary btn-lg"
+              href="https://github.com/tsleeve/SwipeSwap" target="_blank">
+              View on GitHub
+              <i class="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row slideanim vertical-align">
+        <div class="col-sm-6">
+          <a href="#lesion-ml" data-toggle="collapse">
+            <img src="images/brain_perfusion.png"
+              class="img-responsive center-block"
+              alt="Lesion Growth Predictor">
+          </a>
+        </div>
+
+        <div class="col-sm-6" data-toggle="collapse" data-target="#gotswipes"
+          style="cursor: pointer">
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item"
+              src="https://www.youtube.com/embed/EfiwvaxrPSA"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
           <div id="lesion-ml" class="collapse">
             <p>
               <i>Started in April 2017</i>
@@ -353,7 +408,7 @@
                     target="_blank">CS 188</a>
                 </li>
                 <li>
-                  Makes predictions of perfusion parameters which helps
+                  Makes predictions of perfusion parameter values which helps
                   determine the fate of brain tissue of patients with stroke
                 </li>
                 <li>
@@ -368,7 +423,7 @@
           </div>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div id="gotswipes" class="collapse">
             <p>
               <i>Started in October 2016</i>
@@ -376,6 +431,10 @@
                 <li>
                   A software engineering project assigned in <a
                     href="https://goo.gl/g8H8HB" target="_blank">CS 130</a>
+                </li>
+                <li>
+                  An <kbd class="skill">Android</kbd> application that provides
+                  a marketplace for buying and selling UCLA dining hall swipes
                 </li>
               </ul>
             </p>
@@ -386,7 +445,7 @@
       <br /><br />
 
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <p class="text-center">
             <strong>
               <u>FB2Email</u>
@@ -401,7 +460,7 @@
           </p>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <p class="text-center">
             <strong>
               <a href="http://uclastudentplanner.apphb.com/login.aspx"
@@ -419,49 +478,26 @@
             </a>
           </p>
         </div>
-
-        <div class="col-sm-4">
-          <p class="text-center">
-            <strong>
-              <u>Bug Blast</u>
-            </strong>
-          </p>
-          <p class="text-center">
-            <a class="btn btn-primary btn-lg"
-              href="https://github.com/viclai/Bug_Blast" target="_blank">
-              View on GitHub
-              <i class="fa fa-github"></i>
-            </a>
-          </p>
-        </div>
       </div>
 
-      <div class="row slideanim">
-        <div class="col-sm-4">
+      <div class="row slideanim vertical-align">
+        <div class="col-sm-6">
           <a href="#fb2email" data-toggle="collapse">
             <img src="images/fb2email.png" class="img-responsive"
               alt="FB2Email">
           </a>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <a href="#planner" data-toggle="collapse">
             <img src="images/planner.gif" class="img-responsive"
               alt="UCLA Planner">
           </a>
         </div>
-
-        <div class="col-sm-4">
-          <a href="#bug-blast" data-toggle="collapse">
-            <img src="images/bug_blast_animated.gif"
-              class="img-responsive"
-              alt="Bug Blast">
-          </a>
-        </div>
       </div>
 
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div id="fb2email" class="collapse">
             <p>
               <i>Started in March 2016</i>
@@ -483,7 +519,7 @@
           </div>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div id="planner" class="collapse">
             <p>
               <i>Started in June 2015</i>
@@ -513,12 +549,58 @@
                       href="http://uclastudentplanner.apphb.com/login.aspx"
                       target="_blank">here</a>!  Log in as username
                     <i>guest</i> and password <i>guest</i>.  Note that 
-                    it is just a preview, <br>so any entries added will 
+                    it is just a preview, so any entries added will 
                     be deleted at the end of the session.
                   </li>
                 </ul>
             </p>
           </div>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <div class="row">
+        <div class="col-sm-4">
+        </div>
+
+        <div class="col-sm-4">
+          <p class="text-center">
+            <strong>
+              <u>Bug Blast</u>
+            </strong>
+          </p>
+          <p class="text-center">
+            <a class="btn btn-primary btn-lg"
+              href="https://github.com/viclai/Bug_Blast" target="_blank">
+              View on GitHub
+              <i class="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
+
+        <div class="col-sm-4">
+        </div>
+      </div>
+
+      <div class="row slideanim">
+        <div class="col-sm-4">
+        </div>
+
+        <div class="col-sm-4">
+          <a href="#bug-blast" data-toggle="collapse">
+            <img src="images/bug_blast_animated.gif"
+              class="img-responsive"
+              alt="Bug Blast">
+          </a>
+        </div>
+
+        <div class="col-sm-4">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
         </div>
 
         <div class="col-sm-4">
@@ -536,15 +618,19 @@
                 </li>
                 <li>
                   Written in <kbd class="skill">C++</kbd> 
-                  (using concepts including inheritance, class 
-                  composition, and abstract data types) where the 
-                  player attempts to exterminate enemies (bugs) by 
-                  dropping bug sprays while trying to avoid being
-                  infested
+                  using concepts object-oriented principles
+                </li>
+                <li>
+                  The player in the game attempts to exterminate enemies
+                  (bugs) by dropping bug sprays while trying to avoid being
+                  infested.
                 </li>
               </ul>
             </p>
           </div>
+        </div>
+
+        <div class="col-sm-4">
         </div>
       </div>
     </div>

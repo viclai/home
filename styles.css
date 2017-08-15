@@ -6,6 +6,16 @@ ul li, .skill-sep {
     line-height: 1.8;
 }
 
+.img-responsive {
+    margin: 0 auto;
+}
+
+.vertical-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .skill {
     border-radius: 15px;
     padding: 3px 3px;
